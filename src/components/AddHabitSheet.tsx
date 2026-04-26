@@ -128,7 +128,6 @@ export const AddHabitSheet = forwardRef<AddHabitSheetHandle>(function AddHabitSh
           value={draft.name}
           onChangeText={(name) => setDraft((d) => ({ ...d, name }))}
           maxLength={60}
-          autoFocus={!isEditing}
           returnKeyType="done"
           onSubmitEditing={handleSave}
           testID="habit-name-input"

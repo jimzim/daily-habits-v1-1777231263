@@ -3,6 +3,7 @@ appId: com.dailyhabits.app
 - launchApp:
     appId: com.dailyhabits.app
     clearState: false
-- assertVisible:
-    id: "today-screen"
+- extendedWaitUntil:
+    visible:
+      id: "today-screen"
     timeout: 15000

@@ -3,20 +3,26 @@ name: "Navigate to habit detail"
 ---
 - launchApp:
     appId: com.dailyhabits.app
-    clearState: false
-- assertVisible:
-    id: "today-screen"
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      id: "today-screen"
     timeout: 20000
-- assertVisible: "Drink water"
+- assertVisible: ".*Drink water.*"
 - tapOn:
-    text: "Drink water"
-- assertVisible:
-    id: "habit-detail"
+    text: ".*Open Drink water detail.*"
+- extendedWaitUntil:
+    visible:
+      id: "habit-detail"
     timeout: 8000
 - assertVisible:
     id: "habit-stats"
 - assertVisible:
     id: "habit-calendar"
-- back
-- assertVisible:
-    id: "today-screen"
+# Tap the back chevron in the navigation header (top-left circle).
+- tapOn:
+    point: "9%, 9%"
+- extendedWaitUntil:
+    visible:
+      id: "today-screen"
+    timeout: 5000
