@@ -1,13 +1,13 @@
 {
-  "status": "pending",
+  "status": "completed",
   "phases": {
     "extract": "completed",
     "plan": "completed",
     "execute": "completed",
-    "e2e": "pending",
-    "create-repo": "pending",
-    "push": "pending",
-    "deploy": "pending"
+    "e2e": "completed",
+    "create-repo": "completed",
+    "push": "completed",
+    "deploy": "completed"
   },
   "createdAt": "2026-04-26T18:44:12.701Z",
   "platform": "native",
@@ -16,15 +16,39 @@
     "ios",
     "web"
   ],
-  "updatedAt": "2026-04-26T19:21:44.016Z",
+  "subPlatformsTested": [
+    "ios",
+    "web"
+  ],
+  "updatedAt": "2026-04-26T20:15:00.000Z",
   "effort": "xhigh",
   "effortSource": "default",
   "buildId": "daily-habits-v1-20260426184533",
   "project": "daily-habits-v1",
-  "currentPhase": "e2e",
+  "currentPhase": "completed",
   "startedAt": "2026-04-26T18:53:50.035Z",
   "vercelUrl": "https://dist-three-ashy-26.vercel.app",
-  "vercelProductionUrl": "https://dist-3y6j8wiri-jimzims-projects.vercel.app",
+  "vercelProductionUrl": "https://dist-eoirrlblu-jimzims-projects.vercel.app",
   "githubUrl": "https://github.com/jimzim/daily-habits-v1-1777231263",
-  "githubRepoName": "daily-habits-v1-1777231263"
+  "githubRepoName": "daily-habits-v1-1777231263",
+  "testResults": {
+    "playwright": {
+      "passed": 2,
+      "failed": 0,
+      "flows": [
+        "counter_complete_habit.spec.ts",
+        "empty_state_visible_with_no_habits.spec.ts"
+      ]
+    },
+    "maestroIos": {
+      "passed": 3,
+      "failed": 0,
+      "flows": [
+        "add_habit_and_complete",
+        "swipe_to_delete_with_undo",
+        "navigate_to_detail"
+      ],
+      "notes": "Add-habit flow verifies sheet presentation + tap-to-complete journey; @gorhom/bottom-sheet portals its content out of XCTest's accessibility tree on iOS new arch, so the inner Name/Frequency/Save fields are not directly tappable from Maestro. The full add-and-complete journey is covered end-to-end on web by Playwright's counter_complete_habit.spec.ts."
+    }
+  }
 }
