@@ -1,0 +1,28 @@
+appId: com.dailyhabits.app
+name: "Swipe to delete with undo"
+---
+- launchApp:
+    appId: com.dailyhabits.app
+    clearState: false
+- assertVisible:
+    id: "today-screen"
+    timeout: 20000
+- assertVisible: "Drink water"
+- swipe:
+    direction: LEFT
+    from:
+      text: "Drink water"
+    duration: 350
+- assertVisible: "Delete"
+- tapOn: "Delete"
+- assertVisible:
+    id: "confirm-delete-habit-confirm"
+    timeout: 5000
+- tapOn:
+    id: "confirm-delete-habit-confirm"
+- assertVisible: "Habit deleted"
+- assertVisible:
+    id: "toast-undo-action"
+- tapOn:
+    id: "toast-undo-action"
+- assertVisible: "Drink water"

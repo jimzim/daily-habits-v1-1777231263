@@ -1,0 +1,6 @@
+appId: com.dailyhabits.app
+---
+- runFlow:
+    when:
+      true: true
+    file: shared/launch_clean.yaml

@@ -1,0 +1,28 @@
+appId: com.dailyhabits.app
+name: "Add habit and complete"
+---
+- launchApp:
+    appId: com.dailyhabits.app
+    clearState: false
+- assertVisible:
+    id: "today-screen"
+    timeout: 20000
+- assertVisible:
+    id: "habit-add-fab"
+- tapOn:
+    id: "habit-add-fab"
+- assertVisible:
+    id: "add-habit-sheet-title"
+    timeout: 6000
+- tapOn:
+    id: "habit-name-input"
+- inputText: "Stretch 5 min"
+- tapOn:
+    id: "frequency-daily"
+- tapOn:
+    id: "habit-save-button"
+- assertVisible: "Stretch 5 min"
+- assertVisible: "Habit added"
+- assertVisible:
+    text: "Stretch 5 min"
+    timeout: 6000

@@ -1,0 +1,22 @@
+appId: com.dailyhabits.app
+name: "Navigate to habit detail"
+---
+- launchApp:
+    appId: com.dailyhabits.app
+    clearState: false
+- assertVisible:
+    id: "today-screen"
+    timeout: 20000
+- assertVisible: "Drink water"
+- tapOn:
+    text: "Drink water"
+- assertVisible:
+    id: "habit-detail"
+    timeout: 8000
+- assertVisible:
+    id: "habit-stats"
+- assertVisible:
+    id: "habit-calendar"
+- back
+- assertVisible:
+    id: "today-screen"

@@ -1,10 +1,10 @@
-export * from './colors';
-export * from './typography';
-export * from './spacing';
-
 import { ColorScheme, ThemeColors, getColors } from './colors';
 import { typography } from './typography';
 import { spacing, radii, elevation, TOUCH_TARGET } from './spacing';
+
+export * from './colors';
+export * from './typography';
+export * from './spacing';
 
 export interface Theme {
   scheme: ColorScheme;
