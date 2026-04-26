@@ -1,4 +1,4 @@
-import { useSQLiteContext } from 'expo-sqlite';
+import { useDatabase } from '@/db/DatabaseProvider';
 import {
   createContext,
   ReactNode,
@@ -51,7 +51,7 @@ interface HabitsApi extends HabitsState {
 const HabitsContext = createContext<HabitsApi | null>(null);
 
 export function HabitsProvider({ children }: { children: ReactNode }) {
-  const db = useSQLiteContext();
+  const db = useDatabase() as any;
   const [state, setState] = useState<HabitsState>({
     habits: [],
     completions: [],

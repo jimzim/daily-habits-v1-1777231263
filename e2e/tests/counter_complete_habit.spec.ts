@@ -13,7 +13,7 @@ test('user can add a habit and complete it', async ({ page }) => {
 
   await expect(page.getByTestId('add-habit-sheet-title')).toBeVisible({ timeout: 6_000 });
   await page.getByTestId('habit-name-input').fill('Stretch 5 min');
-  await page.getByTestId('frequency-daily').click();
+  await page.getByTestId('habit-frequency-daily').click();
   await page.getByTestId('habit-save-button').click();
 
   await expect(page.getByText('Habit added')).toBeVisible({ timeout: 4_000 });

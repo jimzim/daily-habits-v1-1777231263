@@ -18,7 +18,7 @@ name: "Add habit and complete"
     id: "habit-name-input"
 - inputText: "Stretch 5 min"
 - tapOn:
-    id: "frequency-daily"
+    id: "habit-frequency-daily"
 - tapOn:
     id: "habit-save-button"
 - assertVisible: "Stretch 5 min"

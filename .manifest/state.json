@@ -5,15 +5,18 @@
     "plan": "completed",
     "execute": "completed",
     "e2e": "pending",
-    "create-repo": "completed",
-    "push": "completed",
-    "deploy": "completed"
+    "create-repo": "pending",
+    "push": "pending",
+    "deploy": "pending"
   },
   "createdAt": "2026-04-26T18:44:12.701Z",
   "platform": "native",
   "variant": "default",
-  "subPlatforms": ["ios", "web"],
-  "updatedAt": "2026-04-26T19:24:00.000Z",
+  "subPlatforms": [
+    "ios",
+    "web"
+  ],
+  "updatedAt": "2026-04-26T19:21:44.016Z",
   "effort": "xhigh",
   "effortSource": "default",
   "buildId": "daily-habits-v1-20260426184533",

@@ -2,7 +2,6 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { SQLiteProvider } from 'expo-sqlite';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { useEffect, useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
@@ -13,7 +12,7 @@ import { ToastProvider } from '@/stores/ToastContext';
 import { HabitsProvider } from '@/stores/HabitsContext';
 import { ToastViewport } from '@/components/Toast';
 import { useColorSchemeResolved } from '@/hooks/useTheme';
-import { DB_NAME, initializeSchema } from '@/db/schema';
+import { DatabaseProvider } from '@/db/DatabaseProvider';
 import { getColors } from '@/theme';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
@@ -23,13 +22,13 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <PreferencesProvider>
-          <SQLiteProvider databaseName={DB_NAME} onInit={initializeSchema}>
+          <DatabaseProvider>
             <ToastProvider>
               <HabitsProvider>
                 <ThemedShell />
               </HabitsProvider>
             </ToastProvider>
-          </SQLiteProvider>
+          </DatabaseProvider>
         </PreferencesProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

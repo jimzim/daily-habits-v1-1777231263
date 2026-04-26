@@ -1,0 +1,242 @@
+{
+  "config": {
+    "configFile": "/Users/jzinvent/clawd/projects/daily-habits-v1/playwright.config.ts",
+    "rootDir": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": ".manifest/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 4,
+    "webServer": {
+      "command": "npx expo start --web --port 8081",
+      "url": "http://localhost:8081",
+      "timeout": 120000,
+      "reuseExistingServer": true,
+      "stdout": "ignore",
+      "stderr": "pipe"
+    }
+  },
+  "suites": [
+    {
+      "title": "counter_complete_habit.spec.ts",
+      "file": "counter_complete_habit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "user can add a habit and complete it",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 30285,
+                  "error": {
+                    "message": "TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"today-screen\"], [data-testid=\"today-screen-loading\"]') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"today-screen\"], [data-testid=\"today-screen-loading\"]') to be visible\u001b[22m\n\n    at /Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/counter_complete_habit.spec.ts:6:14",
+                    "location": {
+                      "file": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/counter_complete_habit.spec.ts",
+                      "column": 14,
+                      "line": 6
+                    },
+                    "snippet": "  4 |   await page.goto('/');\n  5 |\n> 6 |   await page.waitForSelector('[data-testid=\"today-screen\"], [data-testid=\"today-screen-loading\"]', {\n    |              ^\n  7 |     timeout: 30_000,\n  8 |   });\n  9 |   await expect(page.getByTestId('today-screen')).toBeVisible({ timeout: 30_000 });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/counter_complete_habit.spec.ts",
+                        "column": 14,
+                        "line": 6
+                      },
+                      "message": "TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"today-screen\"], [data-testid=\"today-screen-loading\"]') to be visible\u001b[22m\n\n\n  4 |   await page.goto('/');\n  5 |\n> 6 |   await page.waitForSelector('[data-testid=\"today-screen\"], [data-testid=\"today-screen-loading\"]', {\n    |              ^\n  7 |     timeout: 30_000,\n  8 |   });\n  9 |   await expect(page.getByTestId('today-screen')).toBeVisible({ timeout: 30_000 });\n    at /Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/counter_complete_habit.spec.ts:6:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-26T19:25:59.948Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results/counter_complete_habit-user-can-add-a-habit-and-complete-it-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results/counter_complete_habit-user-can-add-a-habit-and-complete-it-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results/counter_complete_habit-user-can-add-a-habit-and-complete-it-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/counter_complete_habit.spec.ts",
+                    "column": 14,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ff577e3a21021b8b89ff-ad182de92837e48e5f45",
+          "file": "counter_complete_habit.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "empty_state_visible_with_no_habits.spec.ts",
+      "file": "empty_state_visible_with_no_habits.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "empty state shows after resetting demo and deleting all habits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 30289,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('settings-screen')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('settings-screen')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('settings-screen')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('settings-screen')\u001b[22m\n\n    at /Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/empty_state_visible_with_no_habits.spec.ts:5:53",
+                    "location": {
+                      "file": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/empty_state_visible_with_no_habits.spec.ts",
+                      "column": 53,
+                      "line": 5
+                    },
+                    "snippet": "  3 | test('empty state shows after resetting demo and deleting all habits', async ({ page }) => {\n  4 |   await page.goto('/settings');\n> 5 |   await expect(page.getByTestId('settings-screen')).toBeVisible({ timeout: 30_000 });\n    |                                                     ^\n  6 |\n  7 |   // Reset demo\n  8 |   await page.getByTestId('reset-demo-button').click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/empty_state_visible_with_no_habits.spec.ts",
+                        "column": 53,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('settings-screen')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('settings-screen')\u001b[22m\n\n\n  3 | test('empty state shows after resetting demo and deleting all habits', async ({ page }) => {\n  4 |   await page.goto('/settings');\n> 5 |   await expect(page.getByTestId('settings-screen')).toBeVisible({ timeout: 30_000 });\n    |                                                     ^\n  6 |\n  7 |   // Reset demo\n  8 |   await page.getByTestId('reset-demo-button').click();\n    at /Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/empty_state_visible_with_no_habits.spec.ts:5:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-26T19:25:59.949Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results/empty_state_visible_with_n-5178b-emo-and-deleting-all-habits-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results/empty_state_visible_with_n-5178b-emo-and-deleting-all-habits-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jzinvent/clawd/projects/daily-habits-v1/test-results/empty_state_visible_with_n-5178b-emo-and-deleting-all-habits-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/jzinvent/clawd/projects/daily-habits-v1/e2e/tests/empty_state_visible_with_no_habits.spec.ts",
+                    "column": 53,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9b000192017a8ecf94ce-06d0cc83d2912df0b077",
+          "file": "empty_state_visible_with_no_habits.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-26T19:25:59.625Z",
+    "duration": 30880.137,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
