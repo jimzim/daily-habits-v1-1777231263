@@ -3,20 +3,25 @@
   "phases": {
     "extract": "completed",
     "plan": "completed",
-    "execute": "pending",
+    "execute": "completed",
     "e2e": "pending",
-    "create-repo": "pending",
-    "push": "pending",
-    "deploy": "pending"
+    "create-repo": "completed",
+    "push": "completed",
+    "deploy": "completed"
   },
   "createdAt": "2026-04-26T18:44:12.701Z",
   "platform": "native",
   "variant": "default",
-  "updatedAt": "2026-04-26T18:56:53.708Z",
+  "subPlatforms": ["ios", "web"],
+  "updatedAt": "2026-04-26T19:24:00.000Z",
   "effort": "xhigh",
   "effortSource": "default",
   "buildId": "daily-habits-v1-20260426184533",
   "project": "daily-habits-v1",
-  "currentPhase": "execute",
-  "startedAt": "2026-04-26T18:53:50.035Z"
+  "currentPhase": "e2e",
+  "startedAt": "2026-04-26T18:53:50.035Z",
+  "vercelUrl": "https://dist-three-ashy-26.vercel.app",
+  "vercelProductionUrl": "https://dist-3y6j8wiri-jimzims-projects.vercel.app",
+  "githubUrl": "https://github.com/jimzim/daily-habits-v1-1777231263",
+  "githubRepoName": "daily-habits-v1-1777231263"
 }
